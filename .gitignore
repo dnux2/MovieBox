@@ -1,0 +1,10 @@
+# Secrets
+Secrets.xcconfig
+
+# Xcode
+.DS_Store
+xcuserdata/
+*.xcuserstate
+DerivedData/
+build/
+.swiftpm/

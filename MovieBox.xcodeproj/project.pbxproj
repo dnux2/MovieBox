@@ -6,13 +6,31 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		AAAC431E306BCEA30031EEF0 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = AAAC431D306BCEA30031EEF0 /* Secrets.xcconfig */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		AAAC430A306BBE960031EEF0 /* MovieBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAAC431D306BCEA30031EEF0 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		AAAC4320306BD00E0031EEF0 /* Exceptions for "MovieBox" folder in "MovieBox" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = AAAC4309306BBE960031EEF0 /* MovieBox */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		AAAC430C306BBE960031EEF0 /* MovieBox */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				AAAC4320306BD00E0031EEF0 /* Exceptions for "MovieBox" folder in "MovieBox" target */,
+			);
 			path = MovieBox;
 			sourceTree = "<group>";
 		};
@@ -32,6 +50,7 @@
 		AAAC4301306BBE960031EEF0 = {
 			isa = PBXGroup;
 			children = (
+				AAAC431D306BCEA30031EEF0 /* Secrets.xcconfig */,
 				AAAC430C306BBE960031EEF0 /* MovieBox */,
 				AAAC430B306BBE960031EEF0 /* Products */,
 			);
@@ -109,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAAC431E306BCEA30031EEF0 /* Secrets.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +147,7 @@
 /* Begin XCBuildConfiguration section */
 		AAAC4313306BBE990031EEF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAAC431D306BCEA30031EEF0 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -190,6 +211,7 @@
 		};
 		AAAC4314306BBE990031EEF0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAAC431D306BCEA30031EEF0 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -253,6 +275,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MovieBox/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -284,6 +307,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MovieBox/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
