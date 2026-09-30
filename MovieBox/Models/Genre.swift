@@ -1,8 +1,6 @@
-//
-//  Genre.swift
-//  MovieBox
-//
-//  Created by Shoog Alzaid on 18/04/1448 AH.
-//
-
 import Foundation
+
+struct Genre: Codable, Identifiable, Hashable {
+    let id: Int
+    let name: String
+}

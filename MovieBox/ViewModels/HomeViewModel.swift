@@ -1,8 +1,27 @@
-//
-//  HomeViewModel.swift
-//  MovieBox
-//
-//  Created by Shoog Alzaid on 18/04/1448 AH.
-//
-
 import Foundation
+import Observation
+
+@MainActor
+@Observable
+final class HomeViewModel {
+
+    private let movieService = MovieService()
+
+    var movies: [Movie] = []
+    var isLoading = true          // true من البداية عشان ما تطلع "لا نتائج" لحظة
+    var errorMessage: String?
+
+    func fetchMovies() async {
+        isLoading = true
+        errorMessage = nil
+
+        do {
+            let response = try await movieService.popularMovies()
+            movies = response.results
+        } catch {
+            errorMessage = error.localizedDescription
+        }
+
+        isLoading = false
+    }
+}

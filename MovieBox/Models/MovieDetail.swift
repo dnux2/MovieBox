@@ -1,8 +1,26 @@
-//
-//  MovieDetail.swift
-//  MovieBox
-//
-//  Created by Shoog Alzaid on 18/04/1448 AH.
-//
-
 import Foundation
+
+struct MovieDetail: Codable, Identifiable {
+    let id: Int
+    let title: String
+    let overview: String
+    let posterPath: String?
+    let releaseDate: String?
+    let voteAverage: Double
+    let runtime: Int?
+    let genres: [Genre]
+
+    var posterURL: URL? {
+        guard let posterPath else { return nil }
+        return URL(string: "https://image.tmdb.org/t/p/w500\(posterPath)")
+    }
+
+    var releaseYear: String {
+        String(releaseDate?.prefix(4) ?? "")
+    }
+//يحسب وقت الفيلم
+    var runtimeText: String {
+        guard let runtime, runtime > 0 else { return "" }
+        return "\(runtime / 60)h \(runtime % 60)m"
+    }
+}

@@ -1,8 +1,21 @@
-//
-//  Movie.swift
-//  MovieBox
-//
-//  Created by Shoog Alzaid on 18/04/1448 AH.
-//
-
 import Foundation
+
+struct Movie: Codable, Identifiable, Hashable {
+    let id: Int
+    let title: String
+    let posterPath: String?
+    let releaseDate: String?
+    let voteAverage: Double
+    let overview: String
+    
+//يكمل لي الباث لرابط البوستر
+    var posterURL: URL? {
+        guard let posterPath else { return nil }
+        return URL(string: "https://image.tmdb.org/t/p/w342\(posterPath)")
+    }
+//اخذ سنه الاصدار فقط من التاريخ بدون الشهر واليوم
+//كمان لو كانت nil مايطلع لي مشكله
+    var releaseYear: String {
+        String(releaseDate?.prefix(4) ?? "")
+    }
+}

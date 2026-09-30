@@ -1,8 +1,8 @@
-//
-//  MovieListResponse.swift
-//  MovieBox
-//
-//  Created by Shoog Alzaid on 18/04/1448 AH.
-//
 
 import Foundation
+
+struct MovieListResponse: Codable {
+    let page: Int
+    let results: [Movie]
+    let totalPages: Int
+}
