@@ -25,7 +25,7 @@ struct HomeView: View {
             }
         }
     }
-
+//Heder
     private var header: some View {
         HStack {
             Text("MovieBox")
@@ -33,8 +33,16 @@ struct HomeView: View {
                 .bold()
                 .foregroundStyle(.primary)
             Spacer()
+            NavigationLink {
+                 SearchView()
+             } label: {
+                 Image(systemName: "magnifyingglass")
+                     .font(.system(size: 20))
+                     .foregroundStyle(.primary)
+             }
+            
         }
-        .padding(.horizontal, 25)
+        .padding(.horizontal, 28)
         .padding(.vertical, 15)
     }
 

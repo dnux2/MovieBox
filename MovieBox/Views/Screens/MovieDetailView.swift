@@ -32,7 +32,6 @@ struct MovieDetailView: View {
                     Image(systemName: favorites.isFavorite(movie) ? "heart.fill" : "heart")
                         .foregroundStyle(favorites.isFavorite(movie) ? .red : .white)
                         .padding(8)
-                        .background(.black.opacity(0.35), in: Circle())
                 }
             }
         }
