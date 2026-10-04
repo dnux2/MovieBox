@@ -1,6 +1,5 @@
 import SwiftUI
 
-// سميته EmptyStateView لأن EmptyView اسم جاهز في SwiftUI
 struct EmptyStateView: View {
     let message: String
 

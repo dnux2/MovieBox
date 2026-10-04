@@ -1,6 +1,5 @@
 import SwiftUI
 
-// الخلفية المتدرجة، بستخدمها في كل الشاشات بدل ما أكررها
 struct AppBackground: View {
     @Environment(\.colorScheme) private var colorScheme
 

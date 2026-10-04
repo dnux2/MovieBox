@@ -8,7 +8,7 @@ final class HomeViewModel {
     private let movieService = MovieService()
 
     var movies: [Movie] = []
-    var isLoading = true          // true من البداية عشان ما تطلع "لا نتائج" لحظة
+    var isLoading = true          
     var errorMessage: String?
 
     func fetchMovies() async {

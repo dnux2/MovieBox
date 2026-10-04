@@ -19,7 +19,7 @@ struct MovieCard: View {
                     Text(String(format: "%.1f", movie.voteAverage))
                         .foregroundStyle(.secondary)
                 }
-                .font(.subheadline)
+                .font(.headline)
             }
             .padding(.horizontal, 10)
             .padding(.bottom, 10)
@@ -45,12 +45,15 @@ struct MovieCard: View {
                             image
                                 .resizable()
                                 .scaledToFill()
+  //-----------------------------------------------------
                         case .failure(let error):
                             // مؤقت عشان أعرف ليش فشلت، أشيله بعدين
                             let _ = print("Poster failed:", movie.title, error)
                             Image(systemName: "film")
                                 .font(.title)
                                 .foregroundStyle(.secondary)
+//-----------------------------------------------------
+
                         default:
                             ProgressView()
                         }
@@ -59,4 +62,16 @@ struct MovieCard: View {
             }
             .clipped()
     }
+}
+#Preview {
+    MovieCard(movie: Movie(
+        id: 27205,
+        title: "Inception",
+        posterPath: "/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg",
+        releaseDate: "2010-07-15",
+        voteAverage: 8.4,
+        overview: "A thief who steals secrets through dreams."
+    ))
+    .frame(width: 180)
+    .padding()
 }

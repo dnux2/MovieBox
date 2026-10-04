@@ -1,6 +1,6 @@
 import SwiftUI
 
-// صف الفيلم في نتائج البحث
+// صف الافلام في نتائج البحث
 struct MovieRowView: View {
     let movie: Movie
 
