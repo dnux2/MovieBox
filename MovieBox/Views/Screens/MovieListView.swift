@@ -1,0 +1,18 @@
+//
+//  MovieListView.swift
+//  MovieBox
+//
+//  Created by Shoog Alzaid on 24/04/1448 AH.
+//
+
+import SwiftUI
+
+struct MovieListView: View {
+    var body: some View {
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    }
+}
+
+#Preview {
+    MovieListView()
+}
