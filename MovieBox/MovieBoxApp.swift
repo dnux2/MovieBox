@@ -11,7 +11,6 @@ struct MovieBoxApp: App {
                 MainTabView()
                     .environment(favorites)
 
-                // فوق التطبيق، ويختفي بعد ثانيتين تقريباً
                 if showSplash {
                     SplashView()
                         .transition(.opacity)
