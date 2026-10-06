@@ -167,8 +167,11 @@ struct HomeView: View {
                         // spacing سالب عشان البوستر يغطي جزء من الرقم
                         HStack(alignment: .bottom, spacing: -22) {
                             Text("\(index + 1)")
-                                .font(.system(size: 96, weight: .black, design: .rounded))
+                                .font(.system(size: 100, weight: .black, design: .rounded))
                                 .foregroundStyle(Color.accentColor)
+                                .shadow(color: .white ,radius: 0,x : 1.5 ,y:1.5)
+                                .shadow(color: .black ,radius: 0,x : -1.5 ,y:-1.5)
+                                .shadow(color: .black ,radius: 0,x : 1.5 ,y:-1.5)
                             posterImage(movie, width: 125, height: 185)
                         }
                     }
@@ -221,6 +224,8 @@ struct HomeView: View {
             }
         }
         .padding(.horizontal, 20)
+        
+
     }
 
 
@@ -319,7 +324,6 @@ struct HomeView: View {
                 .lineLimit(2)
 
             HStack(spacing: 12) {
-                // More Details يفتح صفحة التفاصيل
                 NavigationLink(value: movie) {
                     Label("More Details", systemImage: "info.circle.fill")
                         .font(.headline)

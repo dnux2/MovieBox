@@ -5,11 +5,9 @@ struct AppBackground: View {
 
     private var colors: [Color] {
         if colorScheme == .dark {
-            return [Color.accentColor, .black,Color.accentColor, .black]
+            return [/*Color.accentColor,*/.black]
         } else {
             return [
-                Color.accentColor.opacity(0.35),
-                Color(.systemBackground),
                 Color.accentColor.opacity(0.35),
                 Color(.systemBackground)
             ]
